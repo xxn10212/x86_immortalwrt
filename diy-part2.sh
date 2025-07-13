@@ -14,10 +14,10 @@
 sed -i 's/192.168.1.1/192.168.50.1/g' package/base-files/files/bin/config_generate
 
 
-mkdir -p package/base-files/files/etc
+mkdir -p package/base-files/files/etc/config
 
 # 写入 network 配置
-cat > package/base-files/files/etc <<EOF
+cat > package/base-files/files/etc/config/network <<EOF
 config device
     option name 'br-lan'
     option type 'bridge'
